@@ -1,4 +1,5 @@
 import smtplib
+import time
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -40,4 +41,8 @@ if __name__ == "__main__":
     subject = "Notification: Task Completed"
     message_body = "Hello,\n\nYour task has been successfully completed.\n\nBest regards,\nYour Team"
 
+
+
+while True:
     send_email_notification(sender_email, sender_password, recipient_email, subject, message_body)
+    time.sleep(1 * 60)
